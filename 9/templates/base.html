@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}My Feedback Page{% endblock %}
+    </title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; padding: 20px;}
+        header,footer {background: #333; color: white; padding: 10px;}
+
+         nav a {margin: 0 10px; color: aqua;text-decoration: none;}
+
+        main{
+            background: wheat; padding: 20px;margin-top: 10px;border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feedback Page</h1>
+        <nav>
+            <a href="/Feedback">Home</a>
+            
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>
+            &copy; 2025 CODINGWISE ACADEMY INDIA'S BEST IT TRAINING AND PLACEMENT INSTITUTE
+        </p>
+    </footer>
+</body>
+</html>
