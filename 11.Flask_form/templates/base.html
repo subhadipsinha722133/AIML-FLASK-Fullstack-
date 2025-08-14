@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        {% block title %} FLASK WTF FORM {% endblock %}
+    </title>
+</head>
+<body>
+    <h1>Flask Registation Form</h1>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+  
+        {% for category, msg in messages %}  
+        <p style="color:green;">  {{ msg }}</p> 
+        {% endfor %}
+    
+    {% endif %}
+    {% endwith %}
+    
+    {% block content %}{% endblock %}
+</body>
+</html>
